@@ -1,5 +1,5 @@
 module PaymobRuby
-  class Login
+  class Login < Action
     def call
       url = "#{BASE_URI}/auth/tokens"
       response = Faraday.post(url, { api_key: @api_key }.to_json, "Content-Type" => "application/json")
