@@ -1,0 +1,101 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'spec/fixtures/**/*'
+  TargetRubyVersion: 2.7.4
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/FetchEnvVar:
+  Enabled: false
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Layout/LineLength:
+  Max: 180
+
+Layout/ClassStructure:
+  Enabled: true
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+  
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+HttpPositionalArguments:
+  Enabled: false
+
+HasAndBelongsToMany:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Naming/VariableNumber:
+  Enabled: false
