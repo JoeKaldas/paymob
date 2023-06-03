@@ -1,8 +1,8 @@
-module PaymobRuby
+module Paymob
   class Login < Action
     def call
       url = "#{BASE_URI}/auth/tokens"
-      response = Faraday.post(url, { api_key: @api_key }.to_json, "Content-Type" => "application/json")
+      response = ::Faraday.post(url, { api_key: @api_key }.to_json, "Content-Type" => "application/json")
 
       raise AuthenticationError.new("Invalid API key", http_status: response.status, json_body: response.body) unless response.success?
 

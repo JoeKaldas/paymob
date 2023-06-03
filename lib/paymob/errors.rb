@@ -1,4 +1,4 @@
-module PaymobRuby
+module Paymob
   # PaymobError is the base error from which all other more specific Paymob
   # errors derive.
   class PaymobError < StandardError

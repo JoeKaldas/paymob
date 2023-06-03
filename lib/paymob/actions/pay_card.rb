@@ -1,5 +1,5 @@
-module PaymobRuby
-  class PayCard
+module Paymob
+  class PayCard < Action
     def call(user:, amount:, integration_id:, iframe_id:)
       sanity_checks!
       payment_token = Paymob::PaymentToken.call!(
@@ -8,7 +8,7 @@ module PaymobRuby
         amount: amount
       ).payload
 
-      "#{PaymobRuby::BASE_URI}/acceptance/iframes/#{iframe_id}?payment_token=#{payment_token}"
+      "#{Paymob::BASE_URI}/acceptance/iframes/#{iframe_id}?payment_token=#{payment_token}"
     end
 
     private

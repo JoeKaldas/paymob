@@ -1,4 +1,4 @@
-module PaymobRuby
+module Paymob
   class Action
     def self.call(...)
       service = new

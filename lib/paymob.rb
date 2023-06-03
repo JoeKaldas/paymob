@@ -1,17 +1,20 @@
 # frozen_string_literal: true
 
-require_relative "paymob_ruby/version"
+require "faraday"
+
+require_relative "paymob/version"
 
 # API resource support classes
-require "paymob_ruby/errors"
-require "paymob_ruby/payment_token"
+require "paymob/errors"
+require "paymob/payment_token"
 
 # API operations
-require "paymob_ruby/actions/login"
-require "paymob_ruby/actions/pay_card"
-require "paymob_ruby/actions/pay_token"
+require "paymob/actions/action"
+require "paymob/actions/login"
+require "paymob/actions/pay_card"
+require "paymob/actions/pay_token"
 
-module PaymobRuby
+module Paymob
   BASE_URI = "https://accept.paymobsolutions.com/api"
 
   class << self

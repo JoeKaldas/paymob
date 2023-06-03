@@ -1,7 +1,7 @@
-module PaymobRuby
+module Paymob
   class PaymentToken
     def call(user:, amount:, integration_id:)
-      @login_token = PaymobRuby::Login.call
+      @login_token = Paymob::Login.call
       @user = user
       @amount = amount.round
       @integration_id = integration_id
@@ -16,7 +16,7 @@ module PaymobRuby
 
     def order_response
       @order_response ||= Faraday.post(
-        "#{PaymobRuby::BASE_URI}/ecommerce/orders",
+        "#{Paymob::BASE_URI}/ecommerce/orders",
         order_body.to_json,
         "Content-Type": "application/json"
       )
@@ -28,7 +28,7 @@ module PaymobRuby
 
     def payment_key_response
       @payment_key_response ||= Faraday.post(
-        "#{PaymobRuby::BASE_URI}/acceptance/payment_keys",
+        "#{Paymob::BASE_URI}/acceptance/payment_keys",
         payment_key_body.to_json,
         "Content-Type": "application/json"
       )

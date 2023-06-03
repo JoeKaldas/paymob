@@ -12,14 +12,14 @@
 # Include: **/*.gemspec
 Gemspec/RequireMFA:
   Exclude:
-    - 'paymob_ruby.gemspec'
+    - 'paymob.gemspec'
 
 # Offense count: 1
 # Configuration parameters: Include.
 # Include: **/*.gemspec
 Gemspec/RequiredRubyVersion:
   Exclude:
-    - 'paymob_ruby.gemspec'
+    - 'paymob.gemspec'
 
 # Offense count: 2
 # This cop supports safe auto-correction (--auto-correct).
@@ -27,4 +27,4 @@ Gemspec/RequiredRubyVersion:
 # SupportedStyles: slashes, percent_r, mixed
 Style/RegexpLiteral:
   Exclude:
-    - 'paymob_ruby.gemspec'
+    - 'paymob.gemspec'

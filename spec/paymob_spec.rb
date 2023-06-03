@@ -1,6 +1,6 @@
-RSpec.describe PaymobRuby do
+RSpec.describe Paymob do
   it "has a version number" do
-    expect(PaymobRuby::VERSION).not_to be nil
+    expect(Paymob::VERSION).not_to be nil
   end
 
   it "does something useful" do
