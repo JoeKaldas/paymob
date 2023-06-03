@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "paymob_ruby/version"
+require_relative "paymob_ruby/version"
 
 # API resource support classes
 require "paymob_ruby/errors"
