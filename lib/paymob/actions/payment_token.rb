@@ -1,5 +1,5 @@
 module Paymob
-  class PaymentToken
+  class PaymentToken < Action
     def call(user:, amount:, integration_id:)
       @login_token = Paymob::Login.call
       @user = user
@@ -21,7 +21,7 @@ module Paymob
         "Content-Type": "application/json"
       )
 
-      raise Error, "Code: #{@order_response.status}, response: #{@order_response.body}" unless @order_response.success?
+      raise PaymobError, "Code: #{@order_response.status}, response: #{@order_response.body}" unless @order_response.success?
 
       JSON.parse(@order_response.body)
     end
@@ -33,7 +33,7 @@ module Paymob
         "Content-Type": "application/json"
       )
 
-      raise Error, "Code: #{@payment_key_response.status}, response: #{@payment_key_response.body}" unless @payment_key_response.success?
+      raise PaymobError, "Code: #{@payment_key_response.status}, response: #{@payment_key_response.body}" unless @payment_key_response.success?
 
       JSON.parse(@payment_key_response.body)
     end
