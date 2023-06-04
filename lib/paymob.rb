@@ -30,7 +30,7 @@ module Paymob
     attr_accessor :api_key
 
     def initialize
-      @api_key = "api_key"
+      @api_key = "your_api_key"
     end
   end
 end

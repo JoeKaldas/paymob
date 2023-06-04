@@ -5,13 +5,15 @@ module Paymob
     attr_reader :message, :error, :http_body, :http_headers, :http_status, :json_body
 
     # Initializes a PaymobError.
-    def initialize(message = nil, http_status: nil, http_body: nil,
-                   json_body: nil, http_headers: nil)
+    def initialize(message = nil, http_status: nil, http_body: nil)
       @message = message
       @http_status = http_status
       @http_body = http_body
-      @http_headers = http_headers || {}
-      @json_body = json_body
+      begin
+        @json_body = JSON.parse(http_body)
+      rescue JSON::ParserError
+        @json_body = {}
+      end
     end
 
     def to_s
@@ -43,10 +45,8 @@ module Paymob
   class InvalidRequestError < PaymobError
     attr_accessor :param
 
-    def initialize(message, param, http_status: nil, http_body: nil,
-                   json_body: nil, http_headers: nil)
-      super(message, http_status: http_status, http_body: http_body,
-                     json_body: json_body, http_headers: http_headers)
+    def initialize(message, param, http_status: nil, http_body: nil)
+      super(message, http_status: http_status, http_body: http_body)
       @param = param
     end
   end
@@ -65,11 +65,8 @@ module Paymob
   module OAuth
     # OAuthError is raised when the OAuth API returns an error.
     class OAuthError < PaymobError
-      def initialize(code, description, http_status: nil, http_body: nil,
-                     json_body: nil, http_headers: nil)
-        super(description, http_status: http_status, http_body: http_body,
-                           json_body: json_body, http_headers: http_headers,
-                           code: code)
+      def initialize(description, http_status: nil, http_body: nil)
+        super(description, http_status: http_status, http_body: http_body)
       end
     end
 
