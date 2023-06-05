@@ -1,9 +1,11 @@
-if ENV["RAILS_ENV"] == "test"
-  require "simplecov"
-  SimpleCov.start
-end
+ENV["RAILS_ENV"] ||= "test"
+
+require "simplecov"
+SimpleCov.start
 
 require "paymob"
+require "generators/paymob/install_generator"
+require "support/file_manager"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

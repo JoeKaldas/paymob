@@ -1,4 +1,5 @@
 require "fileutils"
+require "rails"
 
 module FileManager
   def config_file
