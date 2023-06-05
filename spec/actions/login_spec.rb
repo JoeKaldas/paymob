@@ -4,7 +4,7 @@ RSpec.describe Paymob::Login do
   let(:result) { described_class.call }
 
   before do
-    Paymob.configure do |config|
+    Paymob.config do |config|
       config.api_key = "api_key"
     end
 

@@ -1,3 +1,8 @@
+if ENV["RAILS_ENV"] == "test"
+  require "simplecov"
+  SimpleCov.start
+end
+
 require "paymob"
 
 RSpec.configure do |config|
@@ -23,4 +28,6 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.order = :random
   config.disable_monkey_patching!
+
+  config.include FileManager
 end

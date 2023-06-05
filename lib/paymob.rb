@@ -19,19 +19,10 @@ module Paymob
   BASE_URI = "https://accept.paymobsolutions.com/api"
 
   class << self
-    attr_accessor :configuration
-  end
-
-  def self.configure
-    self.configuration ||= Configuration.new
-    yield(configuration)
-  end
-
-  class Configuration
     attr_accessor :api_key
+  end
 
-    def initialize
-      @api_key = "your_api_key"
-    end
+  def self.config
+    yield self
   end
 end
