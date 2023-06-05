@@ -22,7 +22,7 @@ module Paymob
     attr_accessor :api_key
   end
 
-  def self.config
+  def self.configure
     yield self
   end
 end

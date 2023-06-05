@@ -5,7 +5,6 @@ SimpleCov.start
 
 require "paymob"
 require "generators/paymob/install_generator"
-require "support/file_manager"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -30,6 +29,4 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.order = :random
   config.disable_monkey_patching!
-
-  config.include FileManager
 end
