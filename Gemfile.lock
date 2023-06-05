@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    paymob_ruby (0.1.0)
+    paymob (0.1.0)
+      activesupport (~> 7.0)
       faraday (~> 2.7.5)
 
 GEM
@@ -73,7 +74,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  paymob_ruby!
+  paymob!
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop

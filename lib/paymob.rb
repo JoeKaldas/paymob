@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 require "faraday"
+require "active_support"
 
 require_relative "paymob/version"
 
 # API resource support classes
 require "paymob/errors"
-require "paymob/payment_token"
 
 # API operations
 require "paymob/actions/action"
+require "paymob/actions/payment_token"
 require "paymob/actions/login"
 require "paymob/actions/pay_card"
 require "paymob/actions/pay_token"

@@ -11,8 +11,8 @@ module Paymob
       @http_body = http_body
       begin
         @json_body = JSON.parse(http_body)
-      rescue JSON::ParserError
-        @json_body = {}
+      rescue StandardError
+        @json_body = nil
       end
     end
 
