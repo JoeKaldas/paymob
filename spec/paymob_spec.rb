@@ -1,9 +1,7 @@
 RSpec.describe Paymob do
   it "has a version number" do
-    expect(Paymob::VERSION).not_to be nil
+    expect(Paymob::VERSION).not_to be(nil)
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
+  it { expect(Paymob::BASE_URI).to eq("https://accept.paymobsolutions.com/api") }
 end
