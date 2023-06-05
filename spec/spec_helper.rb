@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require "paymob"
 
 RSpec.configure do |config|
@@ -12,4 +10,17 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.add_formatter "Fuubar"
+  config.fuubar_progress_bar_options = {
+    format: "[ %c/%C | %p%% ] [%b%i] [ %a | %e ]",
+    progress_mark: "#",
+    remainder_mark: "-",
+    starting_at: 10
+  }
+
+  config.filter_run :focus
+  config.run_all_when_everything_filtered = true
+  config.order = :random
+  config.disable_monkey_patching!
 end
