@@ -1,10 +1,11 @@
 module Paymob
   class PaymentToken < Action
-    def call(user:, amount:, integration_id:)
-      @login_token = Paymob::Login.call
-      @user = user
-      @amount = amount.round
-      @integration_id = integration_id
+    def call(user:, amount:, integration_id:, commission_fees: 0)
+      @login_token     = Paymob::Login.call
+      @user            = user
+      @amount          = amount.round
+      @integration_id  = integration_id
+      @commission_fees = commission_fees
 
       sanity_checks!
 
@@ -18,6 +19,7 @@ module Paymob
 
     def sanity_checks! # rubocop:disable Metrics/AbcSize
       raise InvalidRequestError.new("Amount must be positive", :amount) unless @amount.positive?
+      raise InvalidRequestError.new("Commission fees can' be negative", :commission_fees) if @commission_fees.negative?
       raise InvalidRequestError.new("First name is missing", :user) if first_name.blank?
       raise InvalidRequestError.new("Last name is missing", :user) if last_name.blank?
       raise InvalidRequestError.new("Email is missing", :user) if email.blank?
@@ -73,7 +75,7 @@ module Paymob
         amount_cents: (@amount * 100).to_i,
         currency: "EGP",
         items: [],
-        commission_fees: 0
+        commission_fees: @commission_fees
       }
     end
 
