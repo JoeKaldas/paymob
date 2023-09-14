@@ -3,15 +3,15 @@ module Paymob
     def call(user:, amount:, integration_id:, cc_token:)
       @cc_token = cc_token
       result = Paymob::PaymentToken.call(
-        integration_id: integration_id,
-        user: user,
-        amount: amount
+        integration_id:,
+        user:,
+        amount:
       )
       @payment_token = result[:payment_token]
 
       response = pay!
 
-      { response: response }.merge(result)
+      { response: }.merge(result)
     end
 
     private

@@ -11,7 +11,7 @@ AllCops:
     - 'bin/**/*'
     - 'spec/fixtures/**/*'
     - 'Guardfile'
-  TargetRubyVersion: 2.7.4
+  TargetRubyVersion: 3.1.2
 
 Bundler/OrderedGems:
   Enabled: false

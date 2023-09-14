@@ -3,15 +3,15 @@ module Paymob
     def call(user:, amount:, integration_id:, iframe_id:)
       @iframe_id = iframe_id
       result = Paymob::PaymentToken.call(
-        integration_id: integration_id,
-        user: user,
-        amount: amount
+        integration_id:,
+        user:,
+        amount:
       )
       @payment_token = result[:payment_token]
 
       valid_url?
 
-      { payment_link: payment_link }.merge(result)
+      { payment_link: }.merge(result)
     end
 
     private

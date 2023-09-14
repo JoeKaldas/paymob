@@ -46,7 +46,7 @@ module Paymob
     attr_accessor :param
 
     def initialize(message, param, http_status: nil, http_body: nil)
-      super(message, http_status: http_status, http_body: http_body)
+      super(message, http_status:, http_body:)
       @param = param
     end
   end
@@ -57,7 +57,7 @@ module Paymob
     attr_accessor :sig_header
 
     def initialize(message, sig_header, http_body: nil)
-      super(message, http_body: http_body)
+      super(message, http_body:)
       @sig_header = sig_header
     end
   end
@@ -66,7 +66,7 @@ module Paymob
     # OAuthError is raised when the OAuth API returns an error.
     class OAuthError < PaymobError
       def initialize(description, http_status: nil, http_body: nil)
-        super(description, http_status: http_status, http_body: http_body)
+        super(description, http_status:, http_body:)
       end
     end
 

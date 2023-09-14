@@ -19,7 +19,7 @@ module Paymob
 
     def sanity_checks! # rubocop:disable Metrics/AbcSize
       raise InvalidRequestError.new("Amount must be positive", :amount) unless @amount.positive?
-      raise InvalidRequestError.new("Commission fees can' be negative", :commission_fees) if @commission_fees.negative?
+      raise InvalidRequestError.new("Commission fees can't be negative", :commission_fees) if @commission_fees.negative?
       raise InvalidRequestError.new("First name is missing", :user) if first_name.blank?
       raise InvalidRequestError.new("Last name is missing", :user) if last_name.blank?
       raise InvalidRequestError.new("Email is missing", :user) if email.blank?
@@ -93,10 +93,10 @@ module Paymob
 
     def address_info
       {
-        first_name: first_name,
-        last_name: last_name,
-        phone_number: phone_number,
-        email: email,
+        first_name:,
+        last_name:,
+        phone_number:,
+        email:,
         street: "NA",
         building: "NA",
         floor: "NA",
