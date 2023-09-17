@@ -37,6 +37,10 @@ GEM
     crass (1.0.6)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     faraday (2.7.5)
       faraday-net_http (>= 2.0, < 3.1)
@@ -159,6 +163,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    vcr (6.2.0)
     webmock (3.18.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -169,6 +174,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  dotenv-rails
   fuubar (~> 2.5.1)
   generator_spec
   guard-rspec
@@ -179,6 +185,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.18.0)
   rubocop-rails (~> 2.19.1)
   simplecov (~> 0.22.0)
+  vcr
   webmock (~> 3.18.1)
 
 BUNDLED WITH

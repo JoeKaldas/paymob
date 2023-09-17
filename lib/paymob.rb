@@ -9,7 +9,7 @@ require_relative "paymob/version"
 require "paymob/errors"
 
 # API operations
-require "paymob/actions/action"
+require "paymob/actions/application_service"
 require "paymob/actions/payment_token"
 require "paymob/actions/login"
 require "paymob/actions/pay_card"

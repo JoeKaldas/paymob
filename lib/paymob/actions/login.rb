@@ -1,5 +1,5 @@
 module Paymob
-  class Login < Action
+  class Login < ApplicationService
     def call
       url = "#{BASE_URI}/auth/tokens"
       response = ::Faraday.post(url, { api_key: Paymob.api_key }.to_json, "Content-Type" => "application/json")
@@ -7,8 +7,7 @@ module Paymob
       raise AuthenticationError.new("Invalid API key", http_status: response.status, http_body: response.body) unless response.success?
 
       response_json = JSON.parse(response.body)
-      # @merchant_id = response_json["profile"]["id"]
-      response_json["token"]
+      success(response_json["token"])
     end
   end
 end

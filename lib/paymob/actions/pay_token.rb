@@ -1,17 +1,17 @@
 module Paymob
-  class PayToken < Action
+  class PayToken < ApplicationService
     def call(user:, amount:, integration_id:, cc_token:)
       @cc_token = cc_token
       result = Paymob::PaymentToken.call(
         integration_id:,
         user:,
         amount:
-      )
+      ).payload
       @payment_token = result[:payment_token]
 
       response = pay!
 
-      { response: }.merge(result)
+      success({ response: }.merge(result))
     end
 
     private

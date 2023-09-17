@@ -1,12 +1,12 @@
 require "webmock/rspec"
 
 RSpec.describe Paymob::PaymentToken do
-  let(:result) { described_class.call(user:, amount:, integration_id:, commission:) }
+  let(:result) { described_class.call(user:, amount:, integration_id:, commission_fees:) }
 
-  let(:user)           { {} }
-  let(:amount)         { 100 }
-  let(:commission)     { 10 }
-  let(:integration_id) { 1 }
+  let(:user)            { {} }
+  let(:amount)          { 100 }
+  let(:commission_fees) { 10 }
+  let(:integration_id)  { 1 }
 
   before do
     Paymob.configure do |config|

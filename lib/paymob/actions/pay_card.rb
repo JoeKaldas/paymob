@@ -1,17 +1,17 @@
 module Paymob
-  class PayCard < Action
+  class PayCard < ApplicationService
     def call(user:, amount:, integration_id:, iframe_id:)
       @iframe_id = iframe_id
       result = Paymob::PaymentToken.call(
         integration_id:,
         user:,
         amount:
-      )
+      ).payload
       @payment_token = result[:payment_token]
 
       valid_url?
 
-      { payment_link: }.merge(result)
+      success({ payment_link: }.merge(result))
     end
 
     private

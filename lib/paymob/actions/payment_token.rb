@@ -1,5 +1,5 @@
 module Paymob
-  class PaymentToken < Action
+  class PaymentToken < ApplicationService
     def call(user:, amount:, integration_id:, commission_fees: 0)
       @login_token     = Paymob::Login.call
       @user            = user
@@ -12,7 +12,7 @@ module Paymob
       # Paymob order id
       @order_id = order_response["id"]
 
-      { payment_token: payment_key_response["token"], order_id: @order_id }
+      success({ payment_token: payment_key_response["token"], order_id: @order_id })
     end
 
     private

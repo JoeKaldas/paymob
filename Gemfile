@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gemspec
 
 group :development, :test do
+  gem "dotenv-rails"
   gem "fuubar", "~> 2.5.1"
   gem "guard-rspec"
   gem "rake", "~> 13.0"
@@ -16,5 +17,6 @@ end
 group :test do
   gem "generator_spec"
   gem "simplecov", "~> 0.22.0"
+  gem "vcr"
   gem "webmock", "~> 3.18.1"
 end
