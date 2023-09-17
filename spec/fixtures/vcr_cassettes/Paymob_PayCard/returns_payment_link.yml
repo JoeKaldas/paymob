@@ -1,0 +1,307 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/auth/tokens
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"<API_KEY>"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 23:42:20 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3347'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Allow:
+      - POST, OPTIONS
+      Vary:
+      - Accept-Language, Cookie, Origin
+      Content-Language:
+      - en
+      X-Frame-Options:
+      - ALLOWALL
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"profile":{"id":811626,"user":{"id":1410262,"username":"01202420064","first_name":"Joe","last_name":"Kaldas","date_joined":"2023-06-04T03:20:36.616328","email":"","is_active":true,"is_staff":false,"is_superuser":false,"last_login":null,"groups":[],"user_permissions":[160,116,119,115,213,137,204,118,131,122,128,127,203,123,140,139,455,454,130,266,124,259,121,133,206,125,129,136,185,146,126,604,258,135,138,205,117,120,186,132,134,277]},"created_at":"2023-06-04T03:20:36.633745","active":true,"profile_type":"Merchant","phones":["+201202420064"],"company_emails":null,"company_name":"Freelance","state":"","country":"EGY","city":"Cairo","postal_code":"","street":"","email_notification":false,"order_retrieval_endpoint":null,"delivery_update_endpoint":null,"logo_url":null,"is_mobadra":false,"sector":"Software
+        houses","is_2fa_enabled":false,"activation_method":1,"signed_up_through":0,"failed_attempts":0,"custom_export_columns":[],"server_IP":[],"username":null,"primary_phone_number":"+201202420064","primary_phone_verified":true,"is_temp_password":false,"otp_2fa_sent_at":null,"otp_2fa_attempt":null,"otp_sent_at":"2023-06-04T03:20:37.975699","otp_sent_to":"01202420064","otp_validated_at":"2023-06-04T03:20:47.859564","awb_banner":null,"email_banner":null,"identification_number":null,"delivery_status_callback":"","merchant_external_link":null,"merchant_status":0,"deactivated_by_bank":false,"bank_deactivation_reason":null,"bank_merchant_status":0,"national_id":null,"super_agent":null,"wallet_limit_profile":null,"address":null,"commercial_registration":null,"commercial_registration_area":null,"distributor_code":null,"distributor_branch_code":null,"allow_terminal_order_id":false,"allow_encryption_bypass":false,"wallet_phone_number":null,"suspicious":0,"latitude":null,"longitude":null,"bank_staffs":{},"bank_rejection_reason":null,"bank_received_documents":false,"bank_merchant_digital_status":0,"bank_digital_rejection_reason":null,"filled_business_data":true,"day_start_time":"00:00:00","day_end_time":null,"withhold_transfers":false,"sms_sender_name":"PayMob","withhold_transfers_reason":null,"withhold_transfers_notes":null,"can_bill_deposit_with_card":false,"can_topup_merchants":false,"topup_transfer_id":null,"referral_eligible":false,"is_eligible_to_be_ranger":false,"is_ranger":false,"is_poaching":false,"paymob_app_merchant":false,"settlement_frequency":null,"day_of_the_week":null,"day_of_the_month":null,"allow_transaction_notifications":false,"allow_transfer_notifications":false,"sallefny_amount_whole":0.0,"sallefny_fees_whole":0.0,"paymob_app_first_login":null,"paymob_app_last_activity":null,"payout_enabled":false,"payout_terms":false,"is_bills_new":false,"can_process_multiple_refunds":false,"settlement_classification":0,"instant_settlement_enabled":false,"instant_settlement_transaction_otp_verified":false,"preferred_language":"ar","acq_partner":null,"dom":null,"bank_related":null,"permissions":[]},"token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T0RFeE5qSTJMQ0p3YUdGemFDSTZJbUpqT1dObVlUTTVNRE5rWVRJNU5tVmxORGRoTURObVptUmlZMll5WkdOa09HWTRNVEkxTm1SbU1UTTVOakF4TVRBMVl6WTRZV1UyTkRNeE0yTXpZV1FpTENKbGVIQWlPakUyT1RRNU9UYzNOREI5LklZNU0zWmVjUFdaMjhmS0tOc0J0Yi05OUxLMlVObHpzWUJjU2FTWFltNkVwWVhqbHd1aXpjMktqSXQ0U3l3eXhOTF9uUHZvOS05SDRyQzlpMktCcnBR"}'
+  recorded_at: Sun, 17 Sep 2023 23:42:20 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/ecommerce/orders
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T0RFeE5qSTJMQ0p3YUdGemFDSTZJbUpqT1dObVlUTTVNRE5rWVRJNU5tVmxORGRoTURObVptUmlZMll5WkdOa09HWTRNVEkxTm1SbU1UTTVOakF4TVRBMVl6WTRZV1UyTkRNeE0yTXpZV1FpTENKbGVIQWlPakUyT1RRNU9UYzNOREI5LklZNU0zWmVjUFdaMjhmS0tOc0J0Yi05OUxLMlVObHpzWUJjU2FTWFltNkVwWVhqbHd1aXpjMktqSXQ0U3l3eXhOTF9uUHZvOS05SDRyQzlpMktCcnBR","delivery_needed":false,"amount_cents":10000,"currency":"EGP","items":[],"commission_fees":0}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 23:42:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1070'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Vary:
+      - Accept-Language, Cookie, Origin
+      Content-Language:
+      - en
+      X-Frame-Options:
+      - ALLOWALL
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"id":151259884,"created_at":"2023-09-18T02:42:21.212969","delivery_needed":false,"merchant":{"id":811626,"created_at":"2023-06-04T03:20:36.633745","phones":["+201202420064"],"company_emails":null,"company_name":"Freelance","state":"","country":"EGY","city":"Cairo","postal_code":"","street":""},"collector":null,"amount_cents":10000,"shipping_data":null,"currency":"EGP","is_payment_locked":false,"is_return":false,"is_cancel":false,"is_returned":false,"is_canceled":false,"merchant_order_id":null,"wallet_notification":null,"paid_amount_cents":0,"notify_user_with_email":false,"items":[],"order_url":"https://accept.paymob.com/standalone/?ref=i_LRR2eEdHdnFFWFN3TWxqWHRKNFc5SHZOdz09XzVjTDZselZ4TFdDWDM2Y3ZlRUJya3c9PQ","commission_fees":0,"delivery_fees_cents":0,"delivery_vat_cents":0,"payment_method":"tbc","merchant_staff_tag":null,"api_source":"OTHER","data":{},"token":"LRR2eEdHdnFFWFN3TWxqWHRKNFc5SHZOdz09XzVjTDZselZ4TFdDWDM2Y3ZlRUJya3c9PQ","url":"https://accept.paymob.com/standalone/?ref=i_LRR2eEdHdnFFWFN3TWxqWHRKNFc5SHZOdz09XzVjTDZselZ4TFdDWDM2Y3ZlRUJya3c9PQ"}'
+  recorded_at: Sun, 17 Sep 2023 23:42:21 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/acceptance/payment_keys
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T0RFeE5qSTJMQ0p3YUdGemFDSTZJbUpqT1dObVlUTTVNRE5rWVRJNU5tVmxORGRoTURObVptUmlZMll5WkdOa09HWTRNVEkxTm1SbU1UTTVOakF4TVRBMVl6WTRZV1UyTkRNeE0yTXpZV1FpTENKbGVIQWlPakUyT1RRNU9UYzNOREI5LklZNU0zWmVjUFdaMjhmS0tOc0J0Yi05OUxLMlVObHpzWUJjU2FTWFltNkVwWVhqbHd1aXpjMktqSXQ0U3l3eXhOTF9uUHZvOS05SDRyQzlpMktCcnBR","amount_cents":10000,"expiration":36000,"order_id":151259884,"billing_data":{"first_name":"Joe","last_name":"Kaldas","phone_number":"012xxxxxxxxx","email":"joe@paymob.com","street":"NA","building":"NA","floor":"NA","apartment":"NA","postal_code":"NA","city":"NA","state":"NA","country":"EG","shipping_method":"PKG"},"currency":"EGP","card_integration_id":"3877602"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 23:42:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1028'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept, Accept-Language, Cookie, Origin
+      Allow:
+      - POST, OPTIONS
+      Content-Language:
+      - en
+      X-Frame-Options:
+      - ALLOWALL
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SjFjMlZ5WDJsa0lqb3hOREV3TWpZeUxDSmhiVzkxYm5SZlkyVnVkSE1pT2pFd01EQXdMQ0pqZFhKeVpXNWplU0k2SWtWSFVDSXNJbU5oY21SZmFXNTBaV2R5WVhScGIyNWZhV1FpT2pNNE56YzJNRElzSW05eVpHVnlYMmxrSWpveE5URXlOVGs0T0RRc0ltSnBiR3hwYm1kZlpHRjBZU0k2ZXlKbWFYSnpkRjl1WVcxbElqb2lTbTlsSWl3aWJHRnpkRjl1WVcxbElqb2lTMkZzWkdGeklpd2ljM1J5WldWMElqb2lUa0VpTENKaWRXbHNaR2x1WnlJNklrNUJJaXdpWm14dmIzSWlPaUpPUVNJc0ltRndZWEowYldWdWRDSTZJazVCSWl3aVkybDBlU0k2SWs1Qklpd2ljM1JoZEdVaU9pSk9RU0lzSW1OdmRXNTBjbmtpT2lKRlJ5SXNJbVZ0WVdsc0lqb2lhbTlsUUhCaGVXMXZZaTVqYjIwaUxDSndhRzl1WlY5dWRXMWlaWElpT2lJd01USjRlSGg0ZUhoNGVIZ2lMQ0p3YjNOMFlXeGZZMjlrWlNJNklrNUJJaXdpWlhoMGNtRmZaR1Z6WTNKcGNIUnBiMjRpT2lKT1FTSjlMQ0pzYjJOclgyOXlaR1Z5WDNkb1pXNWZjR0ZwWkNJNlptRnNjMlVzSW1WNGRISmhJanA3ZlN3aWMybHVaMnhsWDNCaGVXMWxiblJmWVhSMFpXMXdkQ0k2Wm1Gc2MyVXNJbVY0Y0NJNk1UWTVOVEF6TURFME1Td2ljRzFyWDJsd0lqb2lNVFUyTGpJeE15NDNNeTR4TkRFaWZRLlJ6Z1g0NXR3S3ltdmJVUVMxWjZkbkxIOHJ0Z3BTeXBMZzlSd0U5aXlCQVVDZXM4b3cxZl82R1VzSkV0b3BCYkM5c2NjeHM5U0I4WVp5X0FKOV9ZN0Fn"}'
+  recorded_at: Sun, 17 Sep 2023 23:42:22 GMT
+- request:
+    method: get
+    uri: https://accept.paymobsolutions.com/api/acceptance/iframes/764413?payment_token=ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SjFjMlZ5WDJsa0lqb3hOREV3TWpZeUxDSmhiVzkxYm5SZlkyVnVkSE1pT2pFd01EQXdMQ0pqZFhKeVpXNWplU0k2SWtWSFVDSXNJbU5oY21SZmFXNTBaV2R5WVhScGIyNWZhV1FpT2pNNE56YzJNRElzSW05eVpHVnlYMmxrSWpveE5URXlOVGs0T0RRc0ltSnBiR3hwYm1kZlpHRjBZU0k2ZXlKbWFYSnpkRjl1WVcxbElqb2lTbTlsSWl3aWJHRnpkRjl1WVcxbElqb2lTMkZzWkdGeklpd2ljM1J5WldWMElqb2lUa0VpTENKaWRXbHNaR2x1WnlJNklrNUJJaXdpWm14dmIzSWlPaUpPUVNJc0ltRndZWEowYldWdWRDSTZJazVCSWl3aVkybDBlU0k2SWs1Qklpd2ljM1JoZEdVaU9pSk9RU0lzSW1OdmRXNTBjbmtpT2lKRlJ5SXNJbVZ0WVdsc0lqb2lhbTlsUUhCaGVXMXZZaTVqYjIwaUxDSndhRzl1WlY5dWRXMWlaWElpT2lJd01USjRlSGg0ZUhoNGVIZ2lMQ0p3YjNOMFlXeGZZMjlrWlNJNklrNUJJaXdpWlhoMGNtRmZaR1Z6WTNKcGNIUnBiMjRpT2lKT1FTSjlMQ0pzYjJOclgyOXlaR1Z5WDNkb1pXNWZjR0ZwWkNJNlptRnNjMlVzSW1WNGRISmhJanA3ZlN3aWMybHVaMnhsWDNCaGVXMWxiblJmWVhSMFpXMXdkQ0k2Wm1Gc2MyVXNJbVY0Y0NJNk1UWTVOVEF6TURFME1Td2ljRzFyWDJsd0lqb2lNVFUyTGpJeE15NDNNeTR4TkRFaWZRLlJ6Z1g0NXR3S3ltdmJVUVMxWjZkbkxIOHJ0Z3BTeXBMZzlSd0U5aXlCQVVDZXM4b3cxZl82R1VzSkV0b3BCYkM5c2NjeHM5U0I4WVp5X0FKOV9ZN0Fn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 23:42:22 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Allow:
+      - GET, PUT, HEAD, OPTIONS
+      Vary:
+      - Accept-Language, Cookie, Origin
+      Content-Language:
+      - en
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html>\n<html>\n    <head>\n        <style>\n            @font-face
+        {\n    font-family: Avenir;\n    src: url(\"/static/fonts/AvenirLTStd-Roman.ttf\");\n}\ninput::-webkit-input-placeholder,\ntextarea::-webkit-input-placeholder
+        {\n  /* Chrome/Opera/Safari */\n  color: #80959E;\n  font-size: 16px;\n  font-family:
+        Avenir;\n  font-weight: 400;\n}\n\ninput::-moz-placeholder,\ntextarea::-webkit-input-placeholder
+        {\n  /* Firefox 19+ */\n  color: #80959E;\n  font-size: 16px; \n  font-family:
+        Avenir;\n  font-weight: 400;\n}\n\ninput:-ms-input-placeholder,\ntextarea::-webkit-input-placeholder
+        {\n  /* IE 10+ */\n  color: #80959E;\n  font-size: 16px;\n  font-family: Avenir;\n
+        \ font-weight: 400;\n}\nbody{\n    font-family: Avenir;\n    background-color:
+        transparent;\n}\np{\n    padding: 0;\n    margin: 0;\n}\n.iframeOut{\n    display:
+        flex;\n    justify-content: center;\n    margin: 100px 0;\n}\n.iframBody{\n
+        \   width: 35%;\n    background: #fff;\n    filter: drop-shadow(0px 0px 71px
+        rgba(10, 51, 69, 0.07));\n    border-radius: 10px;\n    padding: 20px;\n    \n}\n@media
+        \ (max-width: 768px){\n    .iframBody{\n        width: 70%;\n        height:
+        auto;\n        margin-top: 50px;\n    }\n}\nheader{\n    border-bottom: 1px
+        solid #e1ecf1;\n    text-align: center;\n    padding-top: 30px;\n    padding-bottom:
+        20px;\n}\nheader .logo{\n    width: 94px;\n    height: 94px;\n    display:
+        flex;\n    align-items: center;\n    justify-content: center;\n    background:
+        #fff;\n    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.09));\n    position:
+        absolute;\n    top: -47px;\n    right: 50%;\n    transform: translateX(50%);\n}\n.logo
+        img{\n    max-width: 94px;\n    max-height: 94px;\n}\nheader span{\n    font-size:
+        18px;\n    line-height: 22px;\n    color: #0a384b;\n    margin-top: 10px;\n
+        \   display: block;\n}\nheader h4{\n    font-weight: bold;\n    font-size:
+        18px;\n    color: #000;\n    margin: 0;\n    margin-top: 20px;\n}\n.iframeType{\n
+        \   display: flex;\n    justify-content: space-between;\n    margin-top: 40px;\n}\n.iframeType
+        div{\n    display: flex;\n}\n.iframeType p{\n    font-size: 18px;\n    color:
+        #0a384b;\n}\n.iframeType div img{\n    margin-right: 10px;\n}\nform{\n    padding:
+        30px 0;\n}\n.inputDiv{\n    display: flex;\n    justify-content: space-between;\n
+        \   margin-bottom: 20px;\n}\n.inputDiv.saveCard{\n    justify-content: flex-start;\n}\n.inputDiv.saveCard
+        input{\n    height: auto;\n    width: auto;\n    \n}\n.inputDiv label{\n    font-size:
+        17px;\n    margin-bottom: 10px;\n}\n.inputDiv label span{\n    font-size:
+        10px;\n}\n.inputDiv input{\n    height: 55px;\n    width: 100%;\n    border-radius:
+        10px;\n    background: #efefef99;\n    outline: 0;\n    border: 1px solid
+        #f9fafa;\n    padding-left: 10px;\n    font-weight: 900;\n    font-size: 19px;\n
+        \   line-height: 20.4px;\n    text-align: left;\n    color: #0a384b;\n\n}\n.inputDiv
+        textarea{\n    width: 100%;\n    border-radius: 10px;\n    background: #efefef99;\n
+        \   outline: 0;\n    border: 1px solid #f9fafa;\n    padding-left: 10px;\n
+        \   font-weight: 900;\n    font-size: 19px;\n    text-align: left;\n    color:
+        #0a384b;\n    padding-top: 10px;\n    resize: none;\n\n}\n.inputDiv input:focus,.inputDiv
+        textarea:focus{\n    border: 1px solid #28AAE1;\n    transition: .3s ease;\n
+        \   background: #fff;\n    box-shadow: 0px -1px 71px rgba(74, 74, 74, 0.07);\n\n}\n.inputDiv
+        p{\n    font-size: 21px;\n    color: #0A384B;\n    padding: 0;\n    margin:
+        0;\n    margin-left: 30px;\n}\n.inputDiv.cardExpire input:nth-child(2){\n
+        \   margin-left: 20px;\n}\n.inputDiv.address input{\n    width: 24%;\n}\n@media
+        \ (max-width: 768px){\n    .inputDiv{\n        /* flex-wrap: wrap; */\n    }\n
+        \   .inputDiv.address input{\n        width: 48%;\n        margin-bottom:10px;\n
+        \   }\n}\n.iframeBtn{\n    width: 152px;\n    height: 49px;\n    background-color:
+        #31D097;\n    color: #fff;\n    font-family: Avenir;\n    border: 0;\n    border-radius:
+        10px;\n    outline: none;\n    cursor: pointer;\n    font-size: 20px;\n    margin:
+        auto;\n    margin-top: 20px;\n    display: block;\n\n}\nfooter{\n    font-family:
+        Avenir;\n    font-weight: 800;\n    font-size: 16px;\n    color: #80959E;\n
+        \   display: flex;\n    align-items: center;\n    justify-content: center;\n}\nfooter
+        img{\n    margin-left: 20px;\n    height: 25px;\n    width: 100px;\n}\n\n.vodafoneHeader{\n
+        \   padding-top: 0;\n}\n.vodafoneLogo{\n    text-align: left;\n    display:
+        flex;\n    align-items: center;\n}\n.vodafoneLogo p{\n    font-size: 18px;\n
+        \   line-height: 21.6px;\n    text-align: left;\n    color: #0a384b;\n}\n.vodafoneDiv{\n
+        \   flex-direction: column;\n}\n.vodafoneNote{\n    max-width: 70%;\n}\n\n.successDiv{\n
+        \   text-align: center;\n    margin: 150px 0;\n}\n.successIcon img{\n    margin-bottom:
+        30px;\n}\n.successIcon p{\n    font-weight: 900;\n    font-size: 25px;\n    line-height:
+        27px;\n    text-align: center;\n    color: #0a384b;\n    margin-bottom: 20px;\n}\n.successDetails{\n
+        \   padding:  0 50px;\n}\n.successDetails p,.thank p{\n    font-size: 17px;\n
+        \   line-height: 24px;\n    text-align: center;\n    color: #0a384b;\n}\n\n\n\n/*
+        checkBobxStyle */\n[type=\"checkbox\"]:checked,\n[type=\"checkbox\"]:not(:checked)\n{\n
+        \   position: absolute;\n    left: -9999px;\n}\n[type=\"checkbox\"]:checked
+        + label,\n[type=\"checkbox\"]:not(:checked) + label\n{\n    position: relative;\n
+        \   padding-left: 28px;\n    cursor: pointer;\n    line-height: 20px;\n    display:
+        inline-block;\n    color: #0A384B;\n}\n[type=\"checkbox\"]:checked + label:before,\n[type=\"checkbox\"]:not(:checked)
+        + label:before\n{\n    content: '';\n    position: absolute;\n    left: 0;\n
+        \   top: 0;\n    width: 18px;\n    height: 18px;\n    border: 1px solid #ddd;\n
+        \   background: #fff;\n}\n[type=\"checkbox\"]:checked + label:after,\n[type=\"checkbox\"]:not(:checked)
+        + label:after\n{\n    content: '';\n    width: 8px;\n    height: 8px;\n    background:
+        #28AAE1;\n    position: absolute;\n    top: 6px;\n    left: 6px;\n    -webkit-transition:
+        all 0.2s ease;\n    -moz-transition: all 0.2s ease;\n    -o-transition: all
+        0.2s ease;\n    transition: all 0.2s ease;\n}\n[type=\"checkbox\"]:not(:checked)
+        + label:after\n{\n    opacity: 0;\n    -webkit-transform: scale(0);\n    -moz-transform:
+        scale(0);\n    -o-transform: scale(0);\n    -ms-transform: scale(0);\n    transform:
+        scale(0);\n}\n[type=\"checkbox\"]:checked + label:after\n{\n    opacity: 1;\n
+        \   -webkit-transform: scale(1);\n    -moz-transform: scale(1);\n    -o-transform:
+        scale(1);\n    -ms-transform: scale(1);\n    transform: scale(1);\n}\n\n\n
+        \       </style>\n\n        <script>\n            var payment_key = \"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SjFjMlZ5WDJsa0lqb3hOREV3TWpZeUxDSmhiVzkxYm5SZlkyVnVkSE1pT2pFd01EQXdMQ0pqZFhKeVpXNWplU0k2SWtWSFVDSXNJbU5oY21SZmFXNTBaV2R5WVhScGIyNWZhV1FpT2pNNE56YzJNRElzSW05eVpHVnlYMmxrSWpveE5URXlOVGs0T0RRc0ltSnBiR3hwYm1kZlpHRjBZU0k2ZXlKbWFYSnpkRjl1WVcxbElqb2lTbTlsSWl3aWJHRnpkRjl1WVcxbElqb2lTMkZzWkdGeklpd2ljM1J5WldWMElqb2lUa0VpTENKaWRXbHNaR2x1WnlJNklrNUJJaXdpWm14dmIzSWlPaUpPUVNJc0ltRndZWEowYldWdWRDSTZJazVCSWl3aVkybDBlU0k2SWs1Qklpd2ljM1JoZEdVaU9pSk9RU0lzSW1OdmRXNTBjbmtpT2lKRlJ5SXNJbVZ0WVdsc0lqb2lhbTlsUUhCaGVXMXZZaTVqYjIwaUxDSndhRzl1WlY5dWRXMWlaWElpT2lJd01USjRlSGg0ZUhoNGVIZ2lMQ0p3YjNOMFlXeGZZMjlrWlNJNklrNUJJaXdpWlhoMGNtRmZaR1Z6WTNKcGNIUnBiMjRpT2lKT1FTSjlMQ0pzYjJOclgyOXlaR1Z5WDNkb1pXNWZjR0ZwWkNJNlptRnNjMlVzSW1WNGRISmhJanA3ZlN3aWMybHVaMnhsWDNCaGVXMWxiblJmWVhSMFpXMXdkQ0k2Wm1Gc2MyVXNJbVY0Y0NJNk1UWTVOVEF6TURFME1Td2ljRzFyWDJsd0lqb2lNVFUyTGpJeE15NDNNeTR4TkRFaWZRLlJ6Z1g0NXR3S3ltdmJVUVMxWjZkbkxIOHJ0Z3BTeXBMZzlSd0U5aXlCQVVDZXM4b3cxZl82R1VzSkV0b3BCYkM5c2NjeHM5U0I4WVp5X0FKOV9ZN0Fn\";\n
+        \           var payment_key_claims = {\"user_id\": 1410262, \"amount_cents\":
+        10000, \"currency\": \"EGP\", \"card_integration_id\": 3877602, \"order_id\":
+        151259884, \"billing_data\": {\"first_name\": \"Joe\", \"last_name\": \"Kaldas\",
+        \"street\": \"NA\", \"building\": \"NA\", \"floor\": \"NA\", \"apartment\":
+        \"NA\", \"city\": \"NA\", \"state\": \"NA\", \"country\": \"EG\", \"email\":
+        \"joe@paymob.com\", \"phone_number\": \"012xxxxxxxxx\", \"postal_code\": \"NA\",
+        \"extra_description\": \"NA\"}, \"lock_order_when_paid\": false, \"extra\":
+        {}, \"single_payment_attempt\": false, \"exp\": 1695030141, \"pmk_ip\": \"156.213.73.141\"};\n
+        \       </script>\n        <script src=\"/static/sdks/iframe_base_sdk.js?ver=10082023\"></script>\n\n
+        \       <script src=\"/static/sdks/fingerprintnomodule.js\" nomodule defer></script>\n
+        \       <script type=\"module\"  src=\"/static/sdks/fingerprintmodule.js\"></script>\n\n
+        \       <script>\n            \n        </script>\n    </head>\n    <body>\n
+        \       <head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\">\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width,
+        initial-scale=1\">\n</head>\n\n<div class=\"iframeOut\">\n    <div class=\"iframBody\">\n
+        \       <header>\n            <div class=\"iframeType\">\n                <p>Credit
+        Card</p>\n                <div class=\"cardsLogos\">\n                    <img
+        src=\"/static/img/visa.svg\">\n                    <img src=\"/static/img/Mastercard.svg\">\n
+        \               </div>\n            </div>\n        </header>\n        <form
+        id=\"paymob_checkout\">\n            <div class=\"inputDiv\">\n                <input
+        placeholder=\"Card Number\" required maxlength=\"16\" type=\"text\" paymob_field=\"card_number\">\n
+        \           </div>\n            <div class=\"inputDiv\">\n                <input
+        placeholder=\"Card Holder Name\" required paymob_field=\"card_holdername\">\n
+        \           </div>\n            <div class=\"inputDiv cardExpire\">\n                <input
+        placeholder=\"Exp. Month\" required maxlength=\"2\" type=\"text\" paymob_field=\"card_expiry_mm\">\n
+        \               <input placeholder=\"Exp. Year\" required maxlength=\"2\"
+        type=\"text\" paymob_field=\"card_expiry_yy\">\n            </div>\n            <div
+        class=\"inputDiv\">\n                <input placeholder=\"CCV\" type=\"text\"
+        required maxlength=\"4\" paymob_field=\"card_cvn\">\n            </div>\n
+        \           <input type=\"hidden\" value=\"CARD\" paymob_field=\"subtype\">\n
+        \           <div class=\"inputDiv saveCard\">\n                <input type=\"checkbox\"
+        value=\"tokenize\" name=\"save card\" id=\"save card\">\n                <label
+        for=\"save card\">save card</label>\n            </div>\n            <input
+        class=\"iframeBtn\" type=\"submit\" value=\"Pay\">\n        </form>\n        <footer>\n
+        \           Powered by\n           <a href=\"#\"><img src=\"/static/img/paymob_new.svg\"></a>\n
+        \       </footer>\n    </div>\n</div>\n\n\n    </body>\n</html>\n"
+  recorded_at: Sun, 17 Sep 2023 23:42:22 GMT
+recorded_with: VCR 6.2.0

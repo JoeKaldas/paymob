@@ -49,4 +49,10 @@ RSpec.describe Paymob::PaymentToken do
 
     it_behaves_like "service failure", Paymob::InvalidRequestError
   end
+
+  context "with invalid integration ID" do
+    let(:integration_id) { 1 }
+
+    it_behaves_like "service failure", Paymob::InvalidRequestError
+  end
 end

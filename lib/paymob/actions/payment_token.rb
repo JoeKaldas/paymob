@@ -33,7 +33,7 @@ module Paymob
         "Content-Type": "application/json"
       )
 
-      raise PaymobError, "Code: #{@order_response.status}, response: #{@order_response.body}" unless @order_response.success?
+      raise APIError.new("Something went wrong", http_status: @order_response.status, http_body: @order_response.body) unless @order_response.success?
 
       JSON.parse(@order_response.body)
     end

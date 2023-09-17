@@ -13,20 +13,12 @@ module Paymob
       service.failure(e)
     end
 
-    def self.call!(...)
-      new.call(...)
-    end
-
     def success(payload = nil)
       Response.new(true, payload)
     end
 
     def failure(exception)
       Response.new(false, nil, exception)
-    end
-
-    def warning(message)
-      Response.new(false, nil, message)
     end
   end
 end

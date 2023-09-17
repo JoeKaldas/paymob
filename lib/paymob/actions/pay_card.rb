@@ -1,11 +1,12 @@
 module Paymob
   class PayCard < ApplicationService
-    def call(user:, amount:, integration_id:, iframe_id:)
+    def call(user:, amount:, integration_id:, iframe_id:, commission_fees: 0)
       @iframe_id = iframe_id
       result = Paymob::PaymentToken.call(
         integration_id:,
         user:,
-        amount:
+        amount:,
+        commission_fees:
       ).payload
       @payment_token = result[:payment_token]
 
