@@ -8,7 +8,7 @@ http_interactions:
       string: '{"api_key":"api_key"}'
     headers:
       User-Agent:
-      - Faraday v2.7.11
+      - Faraday v2.7.5
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,7 +21,7 @@ http_interactions:
       message: Forbidden
     headers:
       Date:
-      - Thu, 14 Sep 2023 14:09:14 GMT
+      - Sun, 17 Sep 2023 21:21:53 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -41,5 +41,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"incorrect credentials"}'
-  recorded_at: Thu, 14 Sep 2023 14:09:14 GMT
+  recorded_at: Sun, 17 Sep 2023 21:21:53 GMT
 recorded_with: VCR 6.2.0

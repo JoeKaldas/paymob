@@ -10,11 +10,7 @@ RSpec.describe Paymob::Login, :vcr do
       end
     end
 
-    it "raises error" do
-      expect(result).to be_failure
-      expect(result.payload).to be_nil
-      expect(result.error).to be_a(Paymob::AuthenticationError)
-    end
+    it_behaves_like "service failure", Paymob::AuthenticationError
   end
 
   context "with valid api key" do

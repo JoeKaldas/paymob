@@ -10,8 +10,8 @@ require "paymob/errors"
 
 # API operations
 require "paymob/actions/application_service"
-require "paymob/actions/payment_token"
 require "paymob/actions/login"
+require "paymob/actions/payment_token"
 require "paymob/actions/pay_card"
 require "paymob/actions/pay_token"
 

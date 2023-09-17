@@ -7,6 +7,9 @@ require "dotenv/load"
 require "paymob"
 require "generators/paymob/install_generator"
 require "vcr"
+require "rspec"
+
+Dir[File.join("./spec", "support", "**", "*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

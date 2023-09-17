@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/auth/tokens
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"<API_KEY>"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 21:27:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3347'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Allow:
+      - POST, OPTIONS
+      Vary:
+      - Accept-Language, Cookie, Origin
+      Content-Language:
+      - en
+      X-Frame-Options:
+      - ALLOWALL
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"profile":{"id":811626,"user":{"id":1410262,"username":"01202420064","first_name":"Joe","last_name":"Kaldas","date_joined":"2023-06-04T03:20:36.616328","email":"","is_active":true,"is_staff":false,"is_superuser":false,"last_login":null,"groups":[],"user_permissions":[160,116,119,115,213,137,204,118,131,122,128,127,203,123,140,139,455,454,130,266,124,259,121,133,206,125,129,136,185,146,126,604,258,135,138,205,117,120,186,132,134,277]},"created_at":"2023-06-04T03:20:36.633745","active":true,"profile_type":"Merchant","phones":["+201202420064"],"company_emails":null,"company_name":"Freelance","state":"","country":"EGY","city":"Cairo","postal_code":"","street":"","email_notification":false,"order_retrieval_endpoint":null,"delivery_update_endpoint":null,"logo_url":null,"is_mobadra":false,"sector":"Software
+        houses","is_2fa_enabled":false,"activation_method":1,"signed_up_through":0,"failed_attempts":0,"custom_export_columns":[],"server_IP":[],"username":null,"primary_phone_number":"+201202420064","primary_phone_verified":true,"is_temp_password":false,"otp_2fa_sent_at":null,"otp_2fa_attempt":null,"otp_sent_at":"2023-06-04T03:20:37.975699","otp_sent_to":"01202420064","otp_validated_at":"2023-06-04T03:20:47.859564","awb_banner":null,"email_banner":null,"identification_number":null,"delivery_status_callback":"","merchant_external_link":null,"merchant_status":0,"deactivated_by_bank":false,"bank_deactivation_reason":null,"bank_merchant_status":0,"national_id":null,"super_agent":null,"wallet_limit_profile":null,"address":null,"commercial_registration":null,"commercial_registration_area":null,"distributor_code":null,"distributor_branch_code":null,"allow_terminal_order_id":false,"allow_encryption_bypass":false,"wallet_phone_number":null,"suspicious":0,"latitude":null,"longitude":null,"bank_staffs":{},"bank_rejection_reason":null,"bank_received_documents":false,"bank_merchant_digital_status":0,"bank_digital_rejection_reason":null,"filled_business_data":true,"day_start_time":"00:00:00","day_end_time":null,"withhold_transfers":false,"sms_sender_name":"PayMob","withhold_transfers_reason":null,"withhold_transfers_notes":null,"can_bill_deposit_with_card":false,"can_topup_merchants":false,"topup_transfer_id":null,"referral_eligible":false,"is_eligible_to_be_ranger":false,"is_ranger":false,"is_poaching":false,"paymob_app_merchant":false,"settlement_frequency":null,"day_of_the_week":null,"day_of_the_month":null,"allow_transaction_notifications":false,"allow_transfer_notifications":false,"sallefny_amount_whole":0.0,"sallefny_fees_whole":0.0,"paymob_app_first_login":null,"paymob_app_last_activity":null,"payout_enabled":false,"payout_terms":false,"is_bills_new":false,"can_process_multiple_refunds":false,"settlement_classification":0,"instant_settlement_enabled":false,"instant_settlement_transaction_otp_verified":false,"preferred_language":"ar","acq_partner":null,"dom":null,"bank_related":null,"permissions":[]},"token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T0RFeE5qSTJMQ0p3YUdGemFDSTZJbUpqT1dObVlUTTVNRE5rWVRJNU5tVmxORGRoTURObVptUmlZMll5WkdOa09HWTRNVEkxTm1SbU1UTTVOakF4TVRBMVl6WTRZV1UyTkRNeE0yTXpZV1FpTENKbGVIQWlPakUyT1RRNU9EazJORFo5LngwYi1rdlFnanI5ZGVlN05NaTh4ak9zWE9EVmZOS3AycVlRUmxWRW1Da2ltZEVlb1JPd1FqVG9kY0stc1JwQk83dnlVWVVkV0hvMTBpcE04cjA4RWdB"}'
+  recorded_at: Sun, 17 Sep 2023 21:27:26 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/ecommerce/orders
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T0RFeE5qSTJMQ0p3YUdGemFDSTZJbUpqT1dObVlUTTVNRE5rWVRJNU5tVmxORGRoTURObVptUmlZMll5WkdOa09HWTRNVEkxTm1SbU1UTTVOakF4TVRBMVl6WTRZV1UyTkRNeE0yTXpZV1FpTENKbGVIQWlPakUyT1RRNU9EazJORFo5LngwYi1rdlFnanI5ZGVlN05NaTh4ak9zWE9EVmZOS3AycVlRUmxWRW1Da2ltZEVlb1JPd1FqVG9kY0stc1JwQk83dnlVWVVkV0hvMTBpcE04cjA4RWdB","delivery_needed":false,"amount_cents":10000,"currency":"EGP","items":[],"commission_fees":10}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 21:27:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1071'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Vary:
+      - Accept-Language, Cookie, Origin
+      Content-Language:
+      - en
+      X-Frame-Options:
+      - ALLOWALL
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"id":151245773,"created_at":"2023-09-18T00:27:27.014462","delivery_needed":false,"merchant":{"id":811626,"created_at":"2023-06-04T03:20:36.633745","phones":["+201202420064"],"company_emails":null,"company_name":"Freelance","state":"","country":"EGY","city":"Cairo","postal_code":"","street":""},"collector":null,"amount_cents":10000,"shipping_data":null,"currency":"EGP","is_payment_locked":false,"is_return":false,"is_cancel":false,"is_returned":false,"is_canceled":false,"merchant_order_id":null,"wallet_notification":null,"paid_amount_cents":0,"notify_user_with_email":false,"items":[],"order_url":"https://accept.paymob.com/standalone/?ref=i_LRR2OXAwUnY4OE5sbnJTbGk5bXU0ZnlYQT09XzQrZ1M0TWRqdVBEa3NZVE1DSDFaeXc9PQ","commission_fees":10,"delivery_fees_cents":0,"delivery_vat_cents":0,"payment_method":"tbc","merchant_staff_tag":null,"api_source":"OTHER","data":{},"token":"LRR2OXAwUnY4OE5sbnJTbGk5bXU0ZnlYQT09XzQrZ1M0TWRqdVBEa3NZVE1DSDFaeXc9PQ","url":"https://accept.paymob.com/standalone/?ref=i_LRR2OXAwUnY4OE5sbnJTbGk5bXU0ZnlYQT09XzQrZ1M0TWRqdVBEa3NZVE1DSDFaeXc9PQ"}'
+  recorded_at: Sun, 17 Sep 2023 21:27:27 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/acceptance/payment_keys
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T0RFeE5qSTJMQ0p3YUdGemFDSTZJbUpqT1dObVlUTTVNRE5rWVRJNU5tVmxORGRoTURObVptUmlZMll5WkdOa09HWTRNVEkxTm1SbU1UTTVOakF4TVRBMVl6WTRZV1UyTkRNeE0yTXpZV1FpTENKbGVIQWlPakUyT1RRNU9EazJORFo5LngwYi1rdlFnanI5ZGVlN05NaTh4ak9zWE9EVmZOS3AycVlRUmxWRW1Da2ltZEVlb1JPd1FqVG9kY0stc1JwQk83dnlVWVVkV0hvMTBpcE04cjA4RWdB","amount_cents":10000,"expiration":36000,"order_id":151245773,"billing_data":{"first_name":"Joe","last_name":"Kaldas","phone_number":"012xxxxxxxxx","email":"joe@paymob.com","street":"NA","building":"NA","floor":"NA","apartment":"NA","postal_code":"NA","city":"NA","state":"NA","country":"EG","shipping_method":"PKG"},"currency":"EGP","card_integration_id":"3877602"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 17 Sep 2023 21:27:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1028'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept, Accept-Language, Cookie, Origin
+      Allow:
+      - POST, OPTIONS
+      Content-Language:
+      - en
+      X-Frame-Options:
+      - ALLOWALL
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"token":"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SjFjMlZ5WDJsa0lqb3hOREV3TWpZeUxDSmhiVzkxYm5SZlkyVnVkSE1pT2pFd01EQXdMQ0pqZFhKeVpXNWplU0k2SWtWSFVDSXNJbU5oY21SZmFXNTBaV2R5WVhScGIyNWZhV1FpT2pNNE56YzJNRElzSW05eVpHVnlYMmxrSWpveE5URXlORFUzTnpNc0ltSnBiR3hwYm1kZlpHRjBZU0k2ZXlKbWFYSnpkRjl1WVcxbElqb2lTbTlsSWl3aWJHRnpkRjl1WVcxbElqb2lTMkZzWkdGeklpd2ljM1J5WldWMElqb2lUa0VpTENKaWRXbHNaR2x1WnlJNklrNUJJaXdpWm14dmIzSWlPaUpPUVNJc0ltRndZWEowYldWdWRDSTZJazVCSWl3aVkybDBlU0k2SWs1Qklpd2ljM1JoZEdVaU9pSk9RU0lzSW1OdmRXNTBjbmtpT2lKRlJ5SXNJbVZ0WVdsc0lqb2lhbTlsUUhCaGVXMXZZaTVqYjIwaUxDSndhRzl1WlY5dWRXMWlaWElpT2lJd01USjRlSGg0ZUhoNGVIZ2lMQ0p3YjNOMFlXeGZZMjlrWlNJNklrNUJJaXdpWlhoMGNtRmZaR1Z6WTNKcGNIUnBiMjRpT2lKT1FTSjlMQ0pzYjJOclgyOXlaR1Z5WDNkb1pXNWZjR0ZwWkNJNlptRnNjMlVzSW1WNGRISmhJanA3ZlN3aWMybHVaMnhsWDNCaGVXMWxiblJmWVhSMFpXMXdkQ0k2Wm1Gc2MyVXNJbVY0Y0NJNk1UWTVOVEF5TWpBME55d2ljRzFyWDJsd0lqb2lNVFUyTGpJeE15NDNNeTR4TkRFaWZRLllsTFRaNmZGRnVLeHhtcVNPWUstWHIwaGdMaU9qeVlzLWgtQloxdkFxeG9EWnVpMTU4Rk9VTVpfSndTbXBTV3E5UnNXbHFsTzlnTWFkekpzUS02UUt3"}'
+  recorded_at: Sun, 17 Sep 2023 21:27:27 GMT
+recorded_with: VCR 6.2.0

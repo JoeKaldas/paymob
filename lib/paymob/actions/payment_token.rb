@@ -1,7 +1,7 @@
 module Paymob
   class PaymentToken < ApplicationService
     def call(user:, amount:, integration_id:, commission_fees: 0)
-      @login_token     = Paymob::Login.call
+      @login_token     = Paymob::Login.call.payload
       @user            = user
       @amount          = amount.round
       @integration_id  = integration_id
