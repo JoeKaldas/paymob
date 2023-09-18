@@ -1,11 +1,12 @@
 module Paymob
   class PayToken < ApplicationService
-    def call(user:, amount:, integration_id:, cc_token:)
+    def call(user:, amount:, integration_id:, cc_token:, commission_fees: 0)
       @cc_token = cc_token
       result = Paymob::PaymentToken.call(
         integration_id:,
         user:,
-        amount:
+        amount:,
+        commission_fees:
       ).payload
       @payment_token = result[:payment_token]
 
