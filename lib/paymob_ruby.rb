@@ -15,14 +15,20 @@ require "paymob_ruby/api/payment_token"
 require "paymob_ruby/api/pay_card"
 require "paymob_ruby/api/pay_token"
 
+require "paymob_ruby/hmac"
+
 module PaymobRuby
   BASE_URI = "https://accept.paymobsolutions.com/api"
 
   class << self
     attr_accessor :api_key, :hmac_key
-  end
 
-  def self.configure
-    yield self
+    def configure
+      yield configuration
+    end
+  
+    def configuration
+      @configuration ||= Configuration.new
+    end
   end
 end

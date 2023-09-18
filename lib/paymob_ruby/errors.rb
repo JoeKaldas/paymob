@@ -22,6 +22,9 @@ module PaymobRuby
     end
   end
 
+  # ConfigurationMissingError is raised when a configuration is missing
+  class ConfigurationMissingError < StandardError; end
+
   # AuthenticationError is raised when invalid credentials are used to connect
   # to Paymob's servers.
   class AuthenticationError < PaymobError
