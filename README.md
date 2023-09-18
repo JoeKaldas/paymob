@@ -1,20 +1,20 @@
 # Paymob
 
-Unoiffical Paymob Ruby gem for https://paymob.com/
+Unofficial Paymob Ruby gem for [Paymob](https://paymob.com/)
 
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add paymob
+	$ bundle add paymob
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install paymob
+	$ gem install paymob
 
 Next, you need to run the generator:
 
-    $ rails generate paymob:install
+  	$ rails generate paymob:install
 
 ## Usage
 
@@ -26,7 +26,7 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[joekaldas]/paymob.
+Bug reports and pull requests are welcome.
 
 ## License
 
