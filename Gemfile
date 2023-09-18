@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in paymob.gemspec
+# Specify your gem's dependencies in paymob_ruby.gemspec
 gemspec
 
 group :development, :test do

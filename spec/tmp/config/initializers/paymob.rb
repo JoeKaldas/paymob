@@ -1,5 +1,5 @@
-require "paymob"
+require "paymob_ruby"
 
-Paymob.configure do |config|
+PaymobRuby.configure do |config|
   config.api_key = "your_api_key"
 end

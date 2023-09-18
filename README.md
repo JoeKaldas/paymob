@@ -19,7 +19,7 @@ Next, you need to run the generator:
 ## Usage
 
 ```ruby
-Paymob.configure do |config|
+PaymobRuby.configure do |config|
   config.api_key = "api_key"
 end
 ```

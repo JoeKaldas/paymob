@@ -4,8 +4,8 @@ require "simplecov"
 SimpleCov.start
 
 require "dotenv/load"
-require "paymob"
-require "generators/paymob/install_generator"
+require "paymob_ruby"
+require "generators/paymob_ruby/install_generator"
 require "vcr"
 require "rspec"
 
