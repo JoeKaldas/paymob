@@ -9,11 +9,11 @@ require_relative "paymob_ruby/version"
 require "paymob_ruby/errors"
 
 # API operations
-require "paymob_ruby/actions/application_service"
-require "paymob_ruby/actions/login"
-require "paymob_ruby/actions/payment_token"
-require "paymob_ruby/actions/pay_card"
-require "paymob_ruby/actions/pay_token"
+require "paymob_ruby/api/application_service"
+require "paymob_ruby/api/login"
+require "paymob_ruby/api/payment_token"
+require "paymob_ruby/api/pay_card"
+require "paymob_ruby/api/pay_token"
 
 module PaymobRuby
   BASE_URI = "https://accept.paymobsolutions.com/api"

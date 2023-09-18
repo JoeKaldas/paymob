@@ -61,18 +61,4 @@ module PaymobRuby
       @sig_header = sig_header
     end
   end
-
-  module OAuth
-    # OAuthError is raised when the OAuth API returns an error.
-    class OAuthError < PaymobError
-      def initialize(description, http_status: nil, http_body: nil)
-        super(description, http_status:, http_body:)
-      end
-    end
-
-    # InvalidRequestError is raised when a code, refresh token, or grant type
-    # parameter is not provided, but was required.
-    class InvalidRequestError < OAuthError
-    end
-  end
 end

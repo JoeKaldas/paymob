@@ -18,10 +18,53 @@ Next, you need to run the generator:
 
 ## Usage
 
+### Configuration
+
+Configure the gem with your configuration
+
 ```ruby
 PaymobRuby.configure do |config|
   config.api_key = "api_key"
 end
+```
+
+:bulb: You can get your API_KEY from Settings -> Account info -> API Key in your Paymob portal.
+
+For reference on the internals & specifics of Paymob, please head to their official documentation [here](https://docs.paymob.com/)
+
+Any API call will return an object with following methods: 
+
+```ruby
+result = PaymobRuby.doSomething
+result.success?
+result.failure?
+result.payload
+result.error
+```
+
+## Creating a payment:
+
+### Using iframe:
+
+```ruby
+user = { first_name: "John", last_name: "Doe", email: "johndoe@test.com", phone_number: "012xxxxxxxxx" }
+result = PaymobRuby::PayCard.call(user:, amount: 10, integration_id: 12345678, iframe_id: 123)
+```
+
+### Using motto:
+
+```ruby
+user = { first_name: "John", last_name: "Doe", email: "johndoe@test.com", phone_number: "012xxxxxxxxx" }
+result = PaymobRuby::PayToken.call(user:, amount: 10, integration_id: 12345678, token: "abc123")
+```
+
+## Errors:
+Errors could be one of the following:
+
+```ruby
+AuthenticationError
+InvalidRequestError (With `param` attribute)
+APIError
 ```
 
 ## Contributing
