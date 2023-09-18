@@ -19,7 +19,7 @@ module PaymobRuby
   BASE_URI = "https://accept.paymobsolutions.com/api"
 
   class << self
-    attr_accessor :api_key
+    attr_accessor :api_key, :hmac_key
   end
 
   def self.configure
