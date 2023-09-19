@@ -10,7 +10,7 @@
 # rspec failure tracking
 .rspec_status
 
-/paymob-*.gem
+/paymob_ruby-*.gem
 /Gemfile.lock
 .rvmrc
 Gemfile.lock
