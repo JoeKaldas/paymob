@@ -17,13 +17,10 @@ module PaymobRuby
 
     private
 
-    def sanity_checks! # rubocop:disable Metrics/AbcSize
+    def sanity_checks!
+      user_valid?
       raise InvalidRequestError.new("Amount must be positive", :amount) unless @amount.positive?
       raise InvalidRequestError.new("Commission fees can't be negative", :commission_fees) if @commission_fees.negative?
-      raise InvalidRequestError.new("First name is missing", :user) if first_name.blank?
-      raise InvalidRequestError.new("Last name is missing", :user) if last_name.blank?
-      raise InvalidRequestError.new("Email is missing", :user) if email.blank?
-      raise InvalidRequestError.new("Phone number is missing", :user) if phone_number.blank?
     end
 
     def order_response

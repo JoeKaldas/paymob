@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    paymob_accept_ruby (0.1.0)
-      activesupport (~> 7.0)
+    paymob_ruby (0.1.2)
       faraday (~> 2.7.5)
 
 GEM
@@ -74,6 +73,8 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
+    json-schema (4.1.1)
+      addressable (>= 2.8)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -180,7 +181,8 @@ DEPENDENCIES
   fuubar (~> 2.5.1)
   generator_spec
   guard-rspec
-  paymob_accept_ruby!
+  json-schema
+  paymob_ruby!
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.52.0)

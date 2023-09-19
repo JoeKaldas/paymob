@@ -7,6 +7,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "fuubar", "~> 2.5.1"
   gem "guard-rspec"
+  gem "json-schema"
   gem "rake", "~> 13.0"
   gem "rspec", "~> 3.0"
   gem "rubocop", "~> 1.52.0"

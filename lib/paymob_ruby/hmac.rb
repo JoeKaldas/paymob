@@ -1,12 +1,19 @@
 module PaymobRuby
   module Hmac
+    FILTERED_TRANSACTION_KEYS = %w[amount_cents created_at currency error_occured has_parent_transaction id
+                                   integration_id is_3d_secure is_auth is_capture is_refunded is_standalone_payment
+                                   is_voided order.id owner pending
+                                   source_data.pansource_data.sub_type source_data.type success].freeze
+
     class << self
-      def calc_secure_hash(data) # rubocop:disable Metrics/AbcSize
+      def valid_signature?(paymob_response)
         digest = ::OpenSSL::Digest.new("sha512")
-        # rubocop:disable Layout/LineLength
-        str = "#{data['obj']['amount_cents']}#{data['obj']['created_at']}#{data['obj']['currency']}#{data['obj']['error_occured']}#{data['obj']['has_parent_transaction']}#{data['obj']['id']}#{data['obj']['integration_id']}#{data['obj']['is_3d_secure']}#{data['obj']['is_auth']}#{data['obj']['is_capture']}#{data['obj']['is_refunded']}#{data['obj']['is_standalone_payment']}#{data['obj']['is_voided']}#{data['obj']['order']['id']}#{data['obj']['owner']}#{data['obj']['pending']}#{data['obj']['source_data']['pan']}#{data['obj']['source_data']['sub_type']}#{data['obj']['source_data']['type']}#{data['obj']['success']}"
-        # rubocop:enable Layout/LineLength
-        ::OpenSSL::HMAC.hexdigest(digest, PaymobRuby.hmac_key, str)
+
+        concatenated_str = FILTERED_TRANSACTION_KEYS.map do |element|
+          paymob_response.dig("obj", *element.split("."))
+        end.join
+        secure_hash = ::OpenSSL::HMAC.hexdigest(digest, PaymobRuby.hmac_key, concatenated_str)
+        secure_hash == paymob_response["hmac"]
       end
     end
   end

@@ -59,6 +59,11 @@ user = { first_name: "John", last_name: "Doe", email: "johndoe@test.com", phone_
 result = PaymobRuby::PayToken.call(user:, amount: 10, integration_id: 12345678, token: "abc123")
 ```
 
+### Calculating hash
+```ruby
+ PaymobRuby::Hmac.valid_signature?(paymob_response)
+```
+
 ## Errors:
 Errors could be one of the following:
 

@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
 require "faraday"
-require "active_support"
+require "json-schema"
 
 require_relative "paymob_ruby/version"
 
@@ -15,10 +13,11 @@ require "paymob_ruby/api/payment_token"
 require "paymob_ruby/api/pay_card"
 require "paymob_ruby/api/pay_token"
 
+require "paymob_ruby/configuration"
 require "paymob_ruby/hmac"
 
 module PaymobRuby
-  BASE_URI = "https://accept.paymobsolutions.com/api"
+  BASE_URI = "https://accept.paymobsolutions.com/api".freeze
 
   class << self
     attr_accessor :api_key, :hmac_key
@@ -26,7 +25,7 @@ module PaymobRuby
     def configure
       yield configuration
     end
-  
+
     def configuration
       @configuration ||= Configuration.new
     end
