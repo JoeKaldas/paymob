@@ -25,7 +25,7 @@ Configure the gem with your configuration
 ```ruby
 PaymobRuby.configure do |config|
   config.api_key = "api_key"
-	config.hmac_key = "hmac_key"
+  config.hmac_key = "hmac_key"
 end
 ```
 
