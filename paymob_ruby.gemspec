@@ -30,5 +30,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
+  spec.add_dependency "activesupport", "~> 7.0"
   spec.add_dependency "faraday", "~> 2.7.5"
+  spec.add_dependency "json-schema", "~> 4.1.1"
 end
